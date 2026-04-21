@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive UI</title>
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    
+<input type="text" id="name" placeholder="Name">
+<input type="email" id="email" placeholder="Email">
+<button id="btn">Submit</button>
+<p id="error"></p>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$("#btn").click(function(){
+    let name = $("#name").val();
+    let email = $("#email").val();
+
+    if(name=="" || email==""){
+        $("#error").text("All fields required!");
+    } else {
+        $("#error").text("Success!");
+    }
+});
+</script>
+</html>
